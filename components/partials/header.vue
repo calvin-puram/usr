@@ -43,7 +43,7 @@
               d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
             />
           </svg>
-          HOMEAPP
+          Usr
         </nuxt-link>
       </div>
       <div class="block lg:hidden pr-4">
@@ -91,34 +91,6 @@
         "
       >
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
-          <li v-if="$auth.user" class="mr-3">
-            <nuxt-link
-              to="/protect"
-              class="
-                inline-block
-                text-white
-                no-underline
-                hover:text-gray-800 hover:text-underline
-                py-2
-                px-4
-              "
-              >Protected</nuxt-link
-            >
-          </li>
-          <li v-if="$auth.user && $auth.user.role === 'admin'" class="mr-3">
-            <nuxt-link
-              to="/admin"
-              class="
-                inline-block
-                text-white
-                no-underline
-                hover:text-gray-800 hover:text-underline
-                py-2
-                px-4
-              "
-              >Admin</nuxt-link
-            >
-          </li>
           <li v-if="!$auth.user" class="mr-3">
             <nuxt-link
               to="/register"
@@ -180,11 +152,21 @@
               Login
             </nuxt-link>
           </li>
-          <li v-if="$auth.user" class="flex items-center mr-3">
-            <img src="~/assets/user.svg" alt="user" width="20px" />
-            <p class="pl-1 text-white text-sm font-bold">
-              {{ $auth.user.name }}
-            </p>
+          <li v-if="$auth.user" class="flex items-center mr-8">
+            <nuxt-link to="/profile">
+              <img
+                :src="$auth.user.photo"
+                alt="photo"
+                class="
+                  block
+                  rounded-full
+                  h-10
+                  w-10
+                  bg-cover bg-center
+                  object-contain
+                "
+              />
+            </nuxt-link>
           </li>
           <li v-if="$auth.user" class="flex items-center" @click="logout">
             <img

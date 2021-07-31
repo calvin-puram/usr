@@ -2,17 +2,15 @@
   <div>
     <Header />
     <Nuxt />
-    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '@/components/partials/header.vue'
-import Footer from '@/components/partials/footer.vue'
+
 export default {
   components: {
     Header,
-    Footer,
   },
 }
 </script>
@@ -30,5 +28,6 @@ body {
   color: #fff;
   line-height: 1.5;
   letter-spacing: 0em;
+  overflow: hidden;
 }
 </style>

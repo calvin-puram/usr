@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-center h-screen w-full">
     <form
-      class="bg-white shadow-md rounded px-8 w-1/3 pt-6 pb-8 mb-4"
+      class="bg-white shadow-md rounded px-8 w-1/3 pt-6 pb-8 mb-4 mt-4"
       @submit.prevent="handleSubmit"
     >
       <div class="mb-4">
@@ -114,6 +114,8 @@
             hover:bg-blue-700
             text-white
             font-bold
+            w-full
+            block
             py-2
             px-4
             rounded

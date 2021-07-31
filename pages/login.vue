@@ -1,8 +1,8 @@
 <template>
   <div class="flex items-center flex-col justify-center h-screen w-full">
     <div class="bg-white shadow-md rounded px-8 w-1/3 pt-6 pb-8 mb-4">
-      <form class="" @submit.prevent="handleSubmit">
-        <div class="mb-4">
+      <form class="mt-4" @submit.prevent="handleSubmit">
+        <div class="mb-5">
           <label
             class="block text-gray-700 text-sm font-bold mb-2"
             for="username"
@@ -77,8 +77,8 @@
           </button>
         </div>
       </form>
-
-      <div class="flex items-center flex-col other-auth-options pt-8">
+      <p class="horizontal-rule my-6">OR</p>
+      <div class="flex items-center flex-col other-auth-options">
         <button class="google" @click="useAuthProvider('google', Google)">
           <img src="~/assets/google-logo.webp" alt="google icon" />
           <span class="ml-2">Continue with Google</span>
@@ -166,9 +166,11 @@ export default {
         if (data.success) {
           this.$nuxt.$loading.finish()
           this.$auth.setUserToken(data.token)
+          this.$router.push('/')
         }
       } catch (err) {
         if (err) {
+          this.$nuxt.$loading.finish()
           this.$toast.error(err.response.data.msg, {
             duration: 5000,
           })
@@ -190,6 +192,7 @@ export default {
   color: #fff;
   font-weight: 500;
   font-size: 12px;
+  width: 300px;
   margin-bottom: 15px;
 }
 .other-auth-options button img {
@@ -218,5 +221,29 @@ export default {
 }
 .other-auth-options .fb-btn {
   margin-right: 5px;
+}
+
+.horizontal-rule {
+  display: flex;
+  flex-direction: row;
+}
+.horizontal-rule {
+  color: #707070;
+  font-size: 14px;
+  font-weight: 400;
+}
+.horizontal-rule:before,
+.horizontal-rule::after {
+  content: '';
+  flex: 1 1;
+  border-bottom: 1px solid #707070;
+  color: #707070;
+  margin: auto;
+}
+.horizontal-rule::before {
+  margin-right: 10px;
+}
+.horizontal-rule::after {
+  margin-left: 10px;
 }
 </style>
