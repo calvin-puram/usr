@@ -58,11 +58,11 @@ export default {
 
   proxy: {
     '/backend': {
-      target: process.env.APP_URL,
+      target: process.env.NUXT_ENV_APP_URL,
       pathRewrite: { '^/backend': '' },
     },
     '/api': {
-      target: process.env.APP_API,
+      target: process.env.NUXT_ENV_APP_API,
       pathRewrite: { '^/api': '' },
     },
   },
@@ -82,7 +82,7 @@ export default {
           },
           logout: false,
           user: {
-            url: `${process.env.APP_URL}api/v1/users/myprofile`,
+            url: `${process.env.NUXT_ENV_APP_URL}api/v1/users/myprofile`,
           },
         },
       },
