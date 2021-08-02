@@ -53,6 +53,6 @@ export const actions = {
         userdata
       )
       return data
-    } catch (error) {}
+    } catch (err) {}
   },
 }
