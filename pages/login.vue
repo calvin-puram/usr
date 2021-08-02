@@ -92,17 +92,6 @@
           </button>
         </div>
       </form>
-      <p class="horizontal-rule my-6">OR</p>
-      <div class="flex items-center flex-col other-auth-options">
-        <button class="google" @click="useAuthProvider('google', Google)">
-          <img src="~/assets/google-logo.webp" alt="google icon" />
-          <span class="ml-2">Continue with Google</span>
-        </button>
-        <button class="facebook" @click="useAuthProvider('facebook', Facebook)">
-          <i class="fab fa-facebook-f mr-2"></i>
-          <span>Continue with Facebook</span>
-        </button>
-      </div>
     </div>
   </div>
 </template>
@@ -143,53 +132,6 @@ export default {
         this.$store.commit('SET_LOADING', false)
       } catch (error) {
         this.$store.commit('SET_LOADING', false)
-      }
-    },
-
-    async useAuthProvider(provider, proData) {
-      const pro = proData
-      const ProData = pro
-      try {
-        const response = await this.$Oauth.authenticate(provider, ProData)
-        const rsp = response
-        if (rsp.code) {
-          this.responseData.code = rsp.code
-          this.responseData.provider = provider
-          this.useSocialLogin()
-        }
-      } catch (err) {}
-    },
-
-    async useSocialLogin() {
-      const pdata = {
-        code: this.responseData.code,
-        redirect_uri: process.env.REDIRECT_URL,
-      }
-      this.$nuxt.$loading.start()
-      if (this.responseData.provider === 'google') {
-        pdata.client_id = process.env.GOOGLE_CLIENT_ID
-      }
-      if (this.responseData.provider === 'facebook') {
-        pdata.client_id = process.env.FACEBOOK_CLIENT_ID
-      }
-
-      try {
-        const { data } = await this.$axios.post(
-          `https://geo-tours.herokuapp.com/api/v1/users/auth/social/${this.responseData.provider}`,
-          pdata
-        )
-        if (data.success) {
-          this.$nuxt.$loading.finish()
-          this.$auth.setUserToken(data.token)
-          this.$router.push('/')
-        }
-      } catch (err) {
-        if (err) {
-          this.$nuxt.$loading.finish()
-          this.$toast.error(err.response.data.msg, {
-            duration: 5000,
-          })
-        }
       }
     },
   },

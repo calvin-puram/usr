@@ -26,7 +26,7 @@ A frontend development assesment project
   - [x] Openweathermap API - [openweathermap](https://openweathermap.org/) to get weather information
   - [ ] Authentication
     - [x] Sign up
-    - [x] Login (using facebook, google, email/password)
+    - [x] Login
 
 ### 4. Deployment
 

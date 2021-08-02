@@ -29,7 +29,7 @@ export default {
 
   plugins: [
     { src: '~/plugins/modules/auth', ssr: false },
-    { src: '~/plugins/modules/social-auth', mode: 'client' },
+
     {
       src: '~/plugins/modules/geolocation',
       mode: 'client',
