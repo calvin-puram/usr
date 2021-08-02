@@ -84,7 +84,7 @@
               py-2
               px-4
               rounded
-              focus:outline-none focus:shadow-outline
+              focus:outline-none focus:shadow-outline4
             "
           >
             <span>Sign In</span>

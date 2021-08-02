@@ -1,5 +1,7 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/701cadba-39d8-4642-8be0-a1a53d784836/deploy-status)](https://app.netlify.com/sites/user-managermentapp/deploys)
+
 # App built by:
 
 - Name: Calvin Job Puram
@@ -11,7 +13,7 @@ A frontend development assesment project
 
 ## Demo
 
-- Web app [demo](https://auth-three.vercel.app/)
+- Web app [demo](https://user-managermentapp.netlify.app/)
 - Dummy accounts:
   - email: `user@test.app` - password: `password`
 
