@@ -19,8 +19,7 @@
     "axios": "^0.21.1",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
-    "universal-social-auth": "^0.2.5",
-    "vue-tailwind-modal": "^1.0.7"
+    "universal-social-auth": "^0.2.5"
   },
   "devDependencies": {
     "@nuxtjs/dotenv": "^1.4.1",
