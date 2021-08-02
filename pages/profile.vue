@@ -1,6 +1,5 @@
 <template>
   <div
-    v-if="Object.values(getWeather).length > 0"
     class="
       max-w-4xl
       flex
@@ -78,6 +77,7 @@
           {{ $auth.user.email }}
         </p>
         <p
+          v-if="Object.values(getWeather).length > 0 && getWeather.coord"
           class="
             pt-2
             text-base
@@ -101,7 +101,10 @@
           Your Location - {{ getWeather.coord.lon }}° ,
           {{ getWeather.coord.lat }}°
         </p>
-        <div v-if="getWeather !== null" class="pt-8 text-sm text-gray-400">
+        <div
+          v-if="Object.values(getWeather).length > 0"
+          class="pt-8 text-sm text-gray-400"
+        >
           <div class="flex items-center justify-around">
             <h2 class="city-name">
               <span class="text-lg">{{ getWeather.name }}</span>
