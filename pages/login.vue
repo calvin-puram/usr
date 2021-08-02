@@ -175,7 +175,7 @@ export default {
 
       try {
         const { data } = await this.$axios.post(
-          `${process.env.APP_URL}api/v1/users/auth/social/${this.responseData.provider}`,
+          `https://geo-tours.herokuapp.com/api/v1/users/auth/social/${this.responseData.provider}`,
           pdata
         )
         if (data.success) {
@@ -260,5 +260,12 @@ export default {
 }
 .horizontal-rule::after {
   margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .other-auth-options button {
+    width: 150px;
+    margin: auto;
+  }
 }
 </style>

@@ -12,10 +12,7 @@ A frontend development assesment project
 
 ## Demo
 
-![Web App](./client/public/img/rexshop.png)
-![Web App](./client/public/img/rexshop2.png)
-
-- Web app [demo](https://getproducts.netlify.app/)
+- Web app [demo](https://auth-three.vercel.app/)
 - Dummy accounts:
   - email: `user@test.app` - password: `password`
 

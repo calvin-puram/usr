@@ -28,7 +28,7 @@ export const actions = {
   async register({ commit }, registerData) {
     try {
       const data = await this.$axios.$post(
-        '/backend/api/v1/users/signup',
+        'https://geo-tours.herokuapp.com/api/v1/users/signup',
 
         registerData
       )
@@ -49,7 +49,7 @@ export const actions = {
   async updateDetails({ commit }, userdata) {
     try {
       const data = await this.$axios.$patch(
-        `/backend/api/v1/users/updateMe`,
+        `https://geo-tours.herokuapp.com/api/v1/users/updateMe`,
         userdata
       )
       return data
