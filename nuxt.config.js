@@ -78,7 +78,7 @@ export default {
 
         endpoints: {
           login: {
-            url: `${process.env.APP_URL}api/v1/users/login`,
+            url: `${process.env.NUXT_ENV_APP_URL}api/v1/users/login`,
           },
           logout: false,
           user: {
