@@ -1,6 +1,5 @@
 require('dotenv').config()
 export default {
-  ssr: false,
   target: 'static',
   head: {
     title: 'user management app',
