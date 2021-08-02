@@ -61,9 +61,10 @@ export default {
       target: process.env.NUXT_ENV_APP_URL,
       pathRewrite: { '^/backend': '' },
     },
-    '/api': {
+    '/api/*': {
       target: process.env.NUXT_ENV_APP_API,
-      pathRewrite: { '^/api': '' },
+      secure: true,
+      pathRewrite: { '^/api/': '' },
     },
   },
 
