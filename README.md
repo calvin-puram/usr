@@ -1,5 +1,4 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![license](https://img.shields.io/github/license/t-ho/mern-stack)](https://gitlab.com/calvin-puram/product-store/-/blob/master/LICENSE)
 
 # App built by:
 
@@ -38,7 +37,7 @@ A frontend development assesment project
 ### 1. Clone the repository
 
 ```bash
-git clone https://gitlab.com/calvin-puram/product-store.git
+git clone https://github.com/calvin-puram/auth.git
 cd usr
 
 # Edit  .env files to meet your requirements: you need an API key from https://openweathermap.org

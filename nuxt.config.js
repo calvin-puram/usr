@@ -3,7 +3,7 @@ export default {
   ssr: false,
   target: 'static',
   head: {
-    title: 'auth',
+    title: 'user management app',
     htmlAttrs: {
       lang: 'en',
     },

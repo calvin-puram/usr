@@ -266,6 +266,7 @@ export default {
   .other-auth-options button {
     width: 150px;
     margin: auto;
+    margin-bottom: 0.6rem;
   }
 }
 </style>
