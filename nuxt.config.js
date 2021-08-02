@@ -53,7 +53,6 @@ export default {
 
   axios: {
     proxy: true,
-    // baseURL: process.env.APP_URL,
     credentials: true,
   },
 
