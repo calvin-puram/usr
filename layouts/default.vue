@@ -28,6 +28,5 @@ body {
   color: #fff;
   line-height: 1.5;
   letter-spacing: 0em;
-  overflow: hidden;
 }
 </style>

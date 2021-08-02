@@ -18,6 +18,7 @@
             w-full
             md:w-2/5
             justify-center
+            lg:mt-0
             items-start
             text-center
             md:text-left

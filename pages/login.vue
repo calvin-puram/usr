@@ -1,6 +1,21 @@
 <template>
-  <div class="flex items-center flex-col justify-center h-screen w-full">
-    <div class="bg-white shadow-md rounded px-8 w-1/3 pt-6 pb-8 mb-4">
+  <div
+    class="flex items-center flex-col justify-center h-screen w-full mx-auto"
+  >
+    <div
+      class="
+        bg-white
+        shadow-md
+        rounded
+        lg:px-8 lg:w-1/3
+        pt-6
+        pb-8
+        mb-4
+        w-3/4
+        px-2
+        mx-auto
+      "
+    >
       <form class="mt-4" @submit.prevent="handleSubmit">
         <div class="mb-5">
           <label

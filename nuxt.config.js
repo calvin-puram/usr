@@ -29,12 +29,13 @@ export default {
   plugins: [
     { src: '~/plugins/modules/auth', ssr: false },
     { src: '~/plugins/modules/social-auth', mode: 'client' },
+    {
+      src: '~/plugins/modules/geolocation',
+      mode: 'client',
+    },
   ],
 
-  loading: {
-    color: 'white',
-    height: '3px',
-  },
+  loading: '~/components/partials/preLoader.vue',
 
   components: true,
 
@@ -52,7 +53,7 @@ export default {
 
   axios: {
     proxy: true,
-    baseURL: process.env.APP_URL,
+    // baseURL: process.env.APP_URL,
     credentials: true,
   },
 
@@ -60,6 +61,10 @@ export default {
     '/backend': {
       target: process.env.APP_URL,
       pathRewrite: { '^/backend': '' },
+    },
+    '/api': {
+      target: process.env.APP_API,
+      pathRewrite: { '^/api': '' },
     },
   },
 
