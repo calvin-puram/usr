@@ -63,7 +63,7 @@ export default {
       pathRewrite: { '^/backend': '' },
     },
     '/api': {
-      target: process.env.APP_API,
+      target: 'https://api.openweathermap.org',
       pathRewrite: { '^/api': '' },
     },
   },
