@@ -43,7 +43,7 @@ export const actions = {
         `/api/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=ac42dded7173931a9479a45b91239723&units=metric`
       )
       this.commit('SET_WEATHER', data)
-    } catch (error) {}
+    } catch (err) {}
   },
 
   async updateDetails({ commit }, userdata) {
