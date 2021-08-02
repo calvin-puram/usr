@@ -40,7 +40,7 @@ export const actions = {
   async getWeather({ commit }, location) {
     try {
       const data = await this.$axios.$get(
-        `/api/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=ac42dded7173931a9479a45b91239723&units=metric`
+        `/api/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=${process.env.API_KEY}&units=metric`
       )
       this.commit('SET_WEATHER', data)
     } catch (err) {}

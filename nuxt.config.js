@@ -58,8 +58,12 @@ export default {
   },
 
   proxy: {
+    '/backend': {
+      target: process.env.APP_URL,
+      pathRewrite: { '^/backend': '' },
+    },
     '/api': {
-      target: 'https://api.openweathermap.org',
+      target: process.env.APP_API,
       pathRewrite: { '^/api': '' },
     },
   },
