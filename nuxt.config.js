@@ -53,7 +53,7 @@ export default {
 
   axios: {
     proxy: true,
-    credentials: true,
+    credentials: false,
   },
 
   proxy: {

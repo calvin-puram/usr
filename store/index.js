@@ -40,9 +40,7 @@ export const actions = {
   async getWeather({ commit }, location) {
     try {
       const data = await this.$axios.$get(
-        `https://api.allorigins.win/get?url=${encodeURIComponent(
-          `http://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=${process.env.NUXT_ENV_API_KEY}&units=metric`
-        )}`
+        `/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=${process.env.NUXT_ENV_API_KEY}&units=metric`
       )
       this.commit('SET_WEATHER', data)
     } catch (err) {}
