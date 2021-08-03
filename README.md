@@ -9,7 +9,7 @@
 
 ### Vuejs - Nuxtjs - NodeJS
 
-A frontend development assesment project
+A frontend development assessment project built using a performant, production ready Vuejs framework
 
 ## Demo
 
@@ -26,7 +26,7 @@ A frontend development assesment project
   - [x] Vuex store for state management
   - [x] Capacitorjs - [capacitorjs](https://capacitorjs.com/) to get user geolocation
   - [x] Openweathermap API - [openweathermap](https://openweathermap.org/) to get weather information
-  - [ ] Authentication
+  - [x] Authentication
     - [x] Sign up
     - [x] Login
 
