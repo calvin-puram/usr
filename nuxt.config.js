@@ -52,14 +52,9 @@ export default {
   },
 
   axios: {
-    proxy: true,
+    baseURL: process.env.NUXT_ENV_APP_API,
     credentials: false,
-  },
-
-  proxy: {
-    '/data/': {
-      target: process.env.NUXT_ENV_APP_API,
-    },
+    proxyHeaders: false,
   },
 
   auth: {
