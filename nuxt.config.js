@@ -63,7 +63,6 @@ export default {
     },
     '/api/*': {
       target: process.env.NUXT_ENV_APP_API,
-      secure: true,
       pathRewrite: { '^/api/': '' },
     },
   },
