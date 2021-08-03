@@ -57,10 +57,6 @@ export default {
   },
 
   proxy: {
-    '/backend': {
-      target: process.env.NUXT_ENV_APP_URL,
-      pathRewrite: { '^/backend': '' },
-    },
     '/data/': {
       target: process.env.NUXT_ENV_APP_API,
     },
