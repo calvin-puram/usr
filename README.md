@@ -13,7 +13,7 @@ A frontend development assesment project
 
 ## Demo
 
-- Web app [demo](https://user-managermentapp.netlify.app/)
+- Web app [demo](https://auth-three.vercel.app/)
 - Dummy accounts:
   - email: `user@test.app` - password: `password`
 
