@@ -39,10 +39,11 @@ export const actions = {
 
   async getWeather({ commit }, location) {
     try {
-      const data = await this.$axios.$get(
-        `/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=${process.env.NUXT_ENV_API_KEY}&units=metric`
+      await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=${process.env.NUXT_ENV_API_KEY}&units=metric`
       )
-      this.commit('SET_WEATHER', data)
+        .then((res) => res.json())
+        .then((data) => this.commit('SET_WEATHER', data))
     } catch (err) {}
   },
 

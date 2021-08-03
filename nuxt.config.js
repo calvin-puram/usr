@@ -58,9 +58,7 @@ export default {
   },
 
   proxy: {
-    '/data/': {
-      target: process.env.NUXT_ENV_APP_API,
-    },
+    '/data/': process.env.NUXT_ENV_APP_API,
   },
 
   auth: {
