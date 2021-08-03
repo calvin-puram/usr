@@ -9,7 +9,7 @@
 
 ### Vuejs - Nuxtjs - NodeJS
 
-A frontend development assessment project built using a performant, production ready Vuejs framework
+A frontend development assessment project built using a performant, production-ready Vuejs framework
 
 ## Demo
 
@@ -25,6 +25,7 @@ A frontend development assessment project built using a performant, production r
 - Frontend:
   - [x] Vuex store for state management
   - [x] Capacitorjs - [capacitorjs](https://capacitorjs.com/) to get user geolocation
+  - [x] Tailwindcss - [tailwindcss](https://tailwindcss.com/) a utility-first CSS framework for styling
   - [x] Openweathermap API - [openweathermap](https://openweathermap.org/) to get weather information
   - [x] Authentication
     - [x] Sign up
